@@ -17,6 +17,9 @@ namespace MyDotNetApi.Controllers
 
             double result = number1 + number2;
 
+            // Gelen verileri işleyebilirsiniz (örneğin, veritabanına kaydedebilirsiniz).
+            Console.WriteLine($"Input1: {model.Input1}, Input2: {model.Input2}, result: {result}");
+
             // Sonucu döndürün.
             return Ok(new { Message = "Sayılar başarıyla toplandı!", Result = result });
         }
