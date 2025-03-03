@@ -1,4 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using MyDotNetApi.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// PostgreSQL bağlantı dizesi
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(connectionString));
 
 // Add services to the container.
 

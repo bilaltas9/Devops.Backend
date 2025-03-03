@@ -1,0 +1,12 @@
+CREATE DATABASE CalculationDB;
+
+CREATE TABLE Calculations (
+    Id SERIAL PRIMARY KEY,
+    Number1 NUMERIC NOT NULL,
+    Number2 NUMERIC NOT NULL,
+    Result NUMERIC NOT NULL,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO Calculations (Number1, Number2, Result)
+VALUES (10.5, 20.3, 10.5 + 20.3);
